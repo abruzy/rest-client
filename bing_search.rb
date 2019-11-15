@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
-
 require 'rest-client'
 
 # A simple Http Request using Rest-Client Bing search for ruby
 
 class BingSearch
   attr_reader :url, :querry
-
 
   def initialize(url, querry = nil)
     @url = url
@@ -34,6 +32,6 @@ class BingSearch
   private
 
   def response
-   @response ||= RestClient.get @url, params: { q: @querry }
+    @response ||= RestClient.get @url, params: { q: @querry }
   end
 end
