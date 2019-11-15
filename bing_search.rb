@@ -1,8 +1,8 @@
 # frozen_string_literal: true
-#!/usr/bin/env ruby
+
+# !/usr/bin/env ruby
 
 require 'rest-client'
-require 'json'
 
 # A simple Http Request using Rest-Client Bing search for ruby
 
@@ -27,8 +27,7 @@ class BingSearch
   end
 
   def body
-    rest_body = rest_client.body
-    JSON.parse(rest_body)
+    rest_client.body
   end
 
   private
@@ -39,11 +38,19 @@ class BingSearch
 end
 
 url = 'https://bing.com'
+
 search = BingSearch.new(url, 'who is man')
-# puts "Response code:#{search.response_code}"
-# puts '----'
-# puts "Response cookies:#{search.cookies}"
-# puts '-----'
-# puts "Response header#{search.header}"
-# puts '-----'
-puts "Response body #{search.body}"
+
+puts "Response code:#{search.response_code}"
+puts '----'
+
+puts 'Response cookies:'
+puts search.cookies
+puts '-----'
+
+puts 'Response header:'
+puts search.header
+puts '-----'
+
+puts 'Response body:'
+puts search.body

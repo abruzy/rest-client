@@ -9,6 +9,3 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # A simple HTTP and REST client for Ruby
 
 gem 'rest-client', '~> 2.1'
-
-# This is a JSON implementation as a Ruby extension in C.
-gem 'json', '~> 2.2'
