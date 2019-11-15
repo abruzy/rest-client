@@ -1,56 +1,39 @@
 # frozen_string_literal: true
 
-# !/usr/bin/env ruby
 
 require 'rest-client'
 
 # A simple Http Request using Rest-Client Bing search for ruby
 
 class BingSearch
-  attr_accessor :url, :querry
+  attr_reader :url, :querry
 
-  def initialize(url, *querry)
+
+  def initialize(url, querry = nil)
     @url = url
     @querry = querry || ' '
+    puts @querry
   end
 
   def response_code
-    rest_client.code
+    response.code
   end
 
   def cookies
-    rest_client.cookies
+    response.cookies
   end
 
   def header
-    rest_client.headers
+    response.headers
   end
 
   def body
-    rest_client.body
+    response.body
   end
 
   private
 
-  def rest_client
-    RestClient.get @url, params: { q: @querry }
+  def response
+   @response ||= RestClient.get @url, params: { q: @querry }
   end
 end
-
-url = 'https://bing.com'
-
-search = BingSearch.new(url, 'who is man')
-
-puts "Response code:#{search.response_code}"
-puts '----'
-
-puts 'Response cookies:'
-puts search.cookies
-puts '-----'
-
-puts 'Response header:'
-puts search.header
-puts '-----'
-
-puts 'Response body:'
-puts search.body

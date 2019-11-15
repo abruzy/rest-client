@@ -17,9 +17,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://www.microverse.org/">
-    <img src="doc/microverse.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Send HTTP Request using Rest Client</h3>
 
