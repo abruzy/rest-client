@@ -26,8 +26,8 @@ class BingSearch
   end
 
   def body
-    rest_client.body
-    J
+    rest_body = rest_client.body
+    JSON.parse(rest_body)
   end
 
   private
@@ -39,11 +39,10 @@ end
 
 url = 'https://bing.com'
 search = BingSearch.new(url, 'who is man')
-puts "Response code:#{search.response_code}"
-puts '----'
-puts "Response cookies:#{search.cookies}"
-puts '-----'
-puts "Response header#{search.header}"
-puts '-----'
+# puts "Response code:#{search.response_code}"
+# puts '----'
+# puts "Response cookies:#{search.cookies}"
+# puts '-----'
+# puts "Response header#{search.header}"
+# puts '-----'
 puts "Response body #{search.body}"
-
