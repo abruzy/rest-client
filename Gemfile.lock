@@ -3,6 +3,7 @@ GEM
   specs:
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    ffi (1.11.2-x64-mingw32)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -15,12 +16,19 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rest-client (2.1.0-x64-mingw32)
+      ffi (~> 1.9)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   rest-client (~> 2.1)
