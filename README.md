@@ -110,7 +110,7 @@ bundle install
 
 To execute the file, run
 ``` 
-bing_search.rb
+main.rb
 ``` 
 <!-- ROADMAP -->
 ## Roadmap
