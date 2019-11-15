@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+#!/usr/bin/env ruby
 
 require 'rest-client'
 require 'json'
